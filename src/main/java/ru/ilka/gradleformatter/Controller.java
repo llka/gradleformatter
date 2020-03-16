@@ -17,4 +17,9 @@ public class Controller {
     public String toShortFormat(@RequestParam(name = "dependency") String dependency) {
         return formattingService.toShortFormat(dependency);
     }
+
+    @GetMapping
+    public String greeting() {
+        return "Hello, go to /format?dependency=YOUR_DEPENDENCY";
+    }
 }
